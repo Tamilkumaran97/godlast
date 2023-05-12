@@ -26,27 +26,58 @@ const Exnav = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative mx-auto ">
       {/**Navbar */}
-      <div className="absolute z-50 mx-auto w-full  mt-10">
+      <motion.div className="absolute z-50 mx-auto w-full  mt-10">
         <div className="text-white squad flex  justify-between px-3 lg:px-28 text-2xl pt-1">
-          <a href="/" className="text-3xl lg:text-4xl flex animate-pulse">
-            Ligiotec <span className="ml-2">Solution</span>
-          </a>
+          <motion.div whileHover={{ scale: 1.02 }}>
+            <motion.a
+              initial={{ x: `100vw` }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.8 }}
+              href="/"
+              className="text-3xl bg-white/20 p-1 lg:p-2 rounded-xl hover:bg-white/40 lg:text-4xl  hover:text-cyan-800 duration-500 flex animate-pulse"
+            >
+              Ligiotec <span className="ml-2">Solution</span>
+            </motion.a>
+          </motion.div>
 
-          <div className="  lg:flex justify-center items-center gap-8">
-            <a href="/" className="hidden">
-              About{" "}
-            </a>
-            <a href="/" className="hidden">
-              Contact
-            </a>
-            <div className="-mt-2 ">
-              <Hamburger onToggle={showMenu} />
-            </div>
-          </div>
+          <motion.div className="  lg:flex justify-center items-center gap-8">
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <motion.a
+                initial={{ x: `-100vw` }}
+                animate={{ x: 0 }}
+                transition={{ delay: 0.8 }}
+                href="/"
+                className="hidden lg:flex bg-white/20 p-2 rounded-xl hover:bg-white/40  hover:text-black duration-500"
+              >
+                About{" "}
+              </motion.a>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <motion.a
+                initial={{ x: `-100vw` }}
+                animate={{ x: 0 }}
+                transition={{ delay: 0.8 }}
+                href="/"
+                className="hidden lg:flex bg-white/20 p-2 rounded-xl hover:bg-white/40 hover:text-black duration-500"
+              >
+                Contact
+              </motion.a>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.3 }} className="-mt-2 ">
+              <motion.div
+                initial={{ x: `-100vw` }}
+                animate={{ x: 0 }}
+                transition={{ delay: 0.8 }}
+              >
+                <Hamburger onToggle={showMenu} />
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       <ReactCompareSlider
         handle={
           <div
@@ -58,23 +89,37 @@ const Exnav = () => {
           <div className="relative">
             <div className="bg-[#F55326] max-w-screen h-screen inset-0  ">
               {/**Heading */}
-              <div className="flex justify-center items-center   ">
-                <h1 className="squad text-center text-3xl lg:text-5xl p-16 pt-44 z-30 text-black">
-                  "Designing and developing the web tomorrow , <br />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="flex justify-center items-center   "
+              >
+                <motion.h1
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1, duration: 3 }}
+                  className="squad text-center text-3xl md:text-5xl sm:text-5xl lg:text-5xl p-16 pt-36 lg:pt-44 z-30 text-black"
+                >
+                  Designing and developing the web tomorrow , <br />
                   <span>
                     today with our skilled
                     <span className="slant text-5xl lg:text-9xl text-white">
                       {" "}
                       Team
                     </span>{" "}
-                    "
                   </span>
-                </h1>
-              </div>
+                </motion.h1>
+              </motion.div>
               {/**Logo */}
 
               {!open && (
-                <div className="-mt-28 lg:-mt-36 container mx-auto ">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 4 }}
+                  className="-mt-28 lg:-mt-36 container mx-auto "
+                >
                   <div className="  ">
                     <div className="flex justify-center items-center   ">
                       <img
@@ -84,53 +129,73 @@ const Exnav = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
             </div>
             {/**image slide bar */}
             {open ? (
-              <motion.div
-                initial={{ x: -4000 }}
-                animate={{ x: 0 }}
-                transition={{ delay: 0.1, duration: 1.5 }}
-                className="mt-96 lg:mt-80 absolute inset-0 p-5 gap-10 flex whitespace-nowrap overflow-hidden "
-              >
+              <motion.div className="mt-[21rem] md:mt-[14rem] sm:mt-[14rem] lg:mt-80 absolute inset-0 p-5 gap-10 flex whitespace-nowrap overflow-hidden ">
                 <div className="w-[calc(-250px * 7)] flex gap-10  animate-scroll ">
-                  <div className="bg-white h-[350px]  w-[250px] rounded-xl">
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="bg-white h-[350px]  w-[250px] rounded-xl"
+                  >
                     <img
                       className="rounded-xl shadow-black shadow-xl"
                       src={cloud}
                       alt=""
                     />
-                  </div>
-                  <div className="bg-white h-[350px]  w-[250px] rounded-xl">
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    className="bg-white h-[350px]  w-[250px] rounded-xl"
+                  >
                     <img
                       className="rounded-xl shadow-black shadow-xl"
                       src={market}
                       alt=""
                     />
-                  </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img
                       className="rounded-xl shadow-black shadow-xl"
                       src={finance}
                       alt=""
                     />
-                  </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1.2 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img
                       className="rounded-xl shadow-black shadow-xl"
                       src={digital}
                       alt=""
                     />
-                  </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1.4 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img
                       className="rounded-xl shadow-black shadow-xl"
                       src={mobile}
                       alt=""
                     />
-                  </div>
+                  </motion.div>
                   <div className="bg-white h-[350px] w-[250px] rounded-xl">
                     <img
                       className="rounded-xl shadow-black shadow-xl"
@@ -210,23 +275,32 @@ const Exnav = () => {
               {/**Navbar */}
 
               {/**Heading */}
-              <div className="flex justify-center items-center   ">
-                <h1 className="squad text-center text-3xl lg:text-5xl p-16  pt-44 z-0 text-white">
-                  "Designing and developing the web tomorrow , <br />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="flex justify-center items-center   "
+              >
+                <motion.h1
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1, duration: 3 }}
+                  className="squad text-center text-3xl md:text-5xl sm:text-5xl  lg:text-5xl p-16  pt-36 lg:pt-44 z-0 text-white"
+                >
+                  Designing and developing the web tomorrow , <br />
                   <span>
                     today with our skilled
                     <span className="slant text-[#F55326] text-5xl lg:text-9xl">
                       {" "}
                       Squad
                     </span>
-                    "
                   </span>
-                </h1>
-              </div>
+                </motion.h1>
+              </motion.div>
               {/**Logo */}
 
               {!open && (
-                <div className="-mt-28 lg:-mt-36 container mx-auto ">
+                <motion.div className="-mt-28 lg:-mt-36 container mx-auto ">
                   <div className="  ">
                     <div className="flex justify-center items-center   ">
                       <img
@@ -236,7 +310,7 @@ const Exnav = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </motion.div>
               )}
             </div>
             {/**content slide bar */}
@@ -244,8 +318,8 @@ const Exnav = () => {
               <motion.div
                 initial={{ x: 4000 }}
                 animate={{ x: 0 }}
-                transition={{ delay: 0.1, duration: 1.5 }}
-                className="mt-96 lg:mt-80 absolute inset-0 p-5 gap-10 flex whitespace-nowrap overflow-hidden "
+                transition={{ delay: 0, duration: 0.2 }}
+                className="mt-[21rem] md:mt-[14rem] sm:mt-[14rem] lg:mt-80 absolute inset-0 p-5 gap-10 flex whitespace-nowrap overflow-hidden "
               >
                 <div className="w-[calc(-250px * 7)] flex gap-10  animate-scroll ">
                   <div className="bg-white h-[350px]  w-[250px] rounded-xl">
@@ -254,18 +328,33 @@ const Exnav = () => {
                   <div className="bg-white h-[350px]  w-[250px] rounded-xl">
                     <img className="rounded-lg" src={bmarket} alt="" />
                   </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1.4 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img className="rounded-lg" src={bfinance} alt="" />
-                  </div>
+                  </motion.div>
                   <div className="bg-white h-[350px] w-[250px] rounded-xl">
                     <img className="rounded-lg" src={bdigi} alt="" />
                   </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1.6 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img className="rounded-lg" src={bapp} alt="" />
-                  </div>
-                  <div className="bg-white h-[350px] w-[250px] rounded-xl">
+                  </motion.div>
+                  <motion.div
+                    initial={{ y: "-100vw" }}
+                    animate={{ y: 0 }}
+                    transition={{ delay: 1.8 }}
+                    className="bg-white h-[350px] w-[250px] rounded-xl"
+                  >
                     <img className="rounded-lg" src={bweb} alt="" />
-                  </div>
+                  </motion.div>
                   <div className="bg-white h-[350px] w-[250px] rounded-xl">
                     <img className="rounded-lg" src={bauto} alt="" />
                   </div>
