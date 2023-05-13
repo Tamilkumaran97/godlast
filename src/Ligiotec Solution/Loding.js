@@ -152,7 +152,7 @@ const Loding = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 3.5, duration: 1 }}
           className=" 
-      hidden lg:absolute
+      hidden lg:absolute lg:flex
       
       "
         >
