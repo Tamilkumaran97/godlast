@@ -19,11 +19,20 @@ import Hamburger from "hamburger-react";
 import { ReactCompareSlider } from "react-compare-slider";
 import { motion } from "framer-motion";
 import Loading from "./Loding";
+import Footer from "./Footer";
+import sound from "./assets/menu sound.unknown";
+import Transition from "./Transition";
+
+import { Link } from "react-scroll";
 
 const Exnav = () => {
   const [open, setOpen] = useState(false);
   const showMenu = () => {
     setOpen(!open);
+  };
+
+  const play = () => {
+    new Audio(sound).play();
   };
 
   const [loading, setLoading] = useState(false);
@@ -46,8 +55,9 @@ const Exnav = () => {
           transition={{ duration: 1 }}
           className="relative mx-auto "
         >
+          <Transition />
           {/**Navbar */}
-          <motion.div className="absolute z-50 mx-auto w-full  mt-10">
+          <motion.div className="absolute z-40 mx-auto w-full  mt-10">
             <div className="text-white squad flex  justify-between px-3 lg:px-28 text-2xl pt-1">
               <motion.div whileHover={{ scale: 1.02 }}>
                 <motion.a
@@ -90,12 +100,48 @@ const Exnav = () => {
                     initial={{ x: `-100vw` }}
                     animate={{ x: 0 }}
                     transition={{ delay: 0.8 }}
+                    onClick={play}
                   >
                     <Hamburger onToggle={showMenu} />
                   </motion.div>
                 </motion.div>
               </motion.div>
             </div>
+            {open && (
+              <motion.div
+                initial={{ x: 400 }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.9 }}
+                className="  "
+              >
+                <div className="lg:hidden grid bg-white/40 backdrop-blur-lg  h-56  text-center pt-4  text-black font-semibold  ">
+                  <Link
+                    href="/"
+                    className="px-8 cursor-pointer hover:scale-110 duration-200"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="./about"
+                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href="./about"
+                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
+                  >
+                    Work
+                  </Link>
+                  <Link
+                    href="./about"
+                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </motion.div>
+            )}
           </motion.div>
           <ReactCompareSlider
             handle={
@@ -413,8 +459,10 @@ const Exnav = () => {
               </div>
             }
           />
+          <div></div>
         </motion.div>
       )}
+      <Footer />
     </div>
   );
 };
