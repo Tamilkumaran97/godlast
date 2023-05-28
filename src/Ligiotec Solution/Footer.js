@@ -16,11 +16,7 @@ const Footer = () => {
       <Transition />
       <div className=" ">
         <Parallax pages={1.5} className="">
-          <ParallaxLayer
-            offset={0}
-            speed={1}
-            className=" bg-[#387780] rounded-b-[100px]"
-          >
+          <div className=" bg-[#387780] rounded-b-[100px]">
             <div className=" bg-red-500   grid grid-cols-3 grid-rows-none lg:grid-cols-6 lg:grid lg:grid-rows-1 gap-2 lg:p-16 p-4 lg:gap-8 lg:px-8 lg:rounded-b-[100px] sm:mt-[560px] md:mt-[600px] mt-[405px]  border-t border-black pt-5 ">
               <div className="text-[13px] lg:text-sm  w-auto">
                 <h1 className="font-bold   lg:text-xl">Company</h1>
@@ -94,7 +90,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-          </ParallaxLayer>
+          </div>
 
           <div
             className="p-6   lg:flex h-screen bg-[#bac7be] md:mt-[450px] mt-[300px]

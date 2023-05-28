@@ -19,9 +19,10 @@ import Hamburger from "hamburger-react";
 import { ReactCompareSlider } from "react-compare-slider";
 import { motion } from "framer-motion";
 import Loading from "./Loding";
-import Footer from "./Footer";
+/* import Footer from "./Footer"; */
 import sound from "./assets/menu sound.unknown";
 import Transition from "./Transition";
+import { TbSquareRoundedChevronsDownFilled } from "react-icons/tb";
 
 import { Link } from "react-scroll";
 
@@ -53,11 +54,12 @@ const Exnav = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="relative mx-auto "
+          id="all"
+          className="relative mx-auto w-[100%] h-[100vh] "
         >
           <Transition />
           {/**Navbar */}
-          <motion.div className="absolute z-40 mx-auto w-full  mt-10">
+          <motion.div className="absolute z-40 mx-auto w-[100%] mt-10">
             <div className="text-white squad flex  justify-between px-3 lg:px-28 text-2xl pt-1">
               <motion.div whileHover={{ scale: 1.02 }}>
                 <motion.a
@@ -107,42 +109,23 @@ const Exnav = () => {
                 </motion.div>
               </motion.div>
             </div>
-            {open && (
-              <motion.div
-                initial={{ x: 400 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.9 }}
-                className="  "
-              >
-                <div className="lg:hidden grid bg-white/40 backdrop-blur-lg  h-56  text-center pt-4  text-black font-semibold  ">
-                  <Link
-                    href="/"
-                    className="px-8 cursor-pointer hover:scale-110 duration-200"
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    href="./about"
-                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="./about"
-                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
-                  >
-                    Work
-                  </Link>
-                  <Link
-                    href="./about"
-                    className="px-8 cursor-pointer  hover:scale-110 duration-200"
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </motion.div>
-            )}
           </motion.div>
+
+          <Link
+            to="all"
+            smooth="true"
+            className="text-white absolute text-4xl z-50 left-[300px] bottom-40 animate-bounce opacity-50 lg:hidden"
+          >
+            <TbSquareRoundedChevronsDownFilled className="rotate-180 " />
+          </Link>
+          <Link
+            to="section"
+            smooth="true"
+            className="text-white absolute text-4xl z-50 left-[300px] bottom-28 animate-bounce opacity-50 lg:hidden  "
+          >
+            <TbSquareRoundedChevronsDownFilled className="" />
+          </Link>
+
           <ReactCompareSlider
             handle={
               <div
@@ -459,10 +442,8 @@ const Exnav = () => {
               </div>
             }
           />
-          <div></div>
         </motion.div>
       )}
-      <Footer />
     </div>
   );
 };
