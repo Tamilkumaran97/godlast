@@ -5,8 +5,6 @@ import Exnav from "./Ligiotec Solution/Exnav";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import SecondPage from "./Ligiotec Solution/SecondPage";
-import ThirdPage from "./Ligiotec Solution/ThirdPage";
-
 function App() {
   const containerRef = useRef(null);
   return (
