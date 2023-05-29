@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import image from "./assets/ligi.gif";
 import image2 from "./assets/lIGIOTEC sOLUTION (2).gif";
 import cloud from "./assets/cloud.gif";
@@ -18,7 +18,7 @@ import bauto from "./assets/bauto.gif";
 import Hamburger from "hamburger-react";
 import { ReactCompareSlider } from "react-compare-slider";
 import { motion } from "framer-motion";
-import Loading from "./Loding";
+
 /* import Footer from "./Footer"; */
 import sound from "./assets/menu sound.unknown";
 import Transition from "./Transition";
