@@ -1,18 +1,35 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 import Exnav from "./Ligiotec Solution/Exnav";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import SecondPage from "./Ligiotec Solution/SecondPage";
+
+import Loding from "./Ligiotec Solution/Loding";
 function App() {
   const containerRef = useRef(null);
+
+  const [loading, setLoading] = useState(false);
+
+   useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+  }, []);
   return (
     <div className="App">
       <LocomotiveScrollProvider
         options={{
           smooth: true,
           // ... all available Locomotive Scroll instance options
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
         }}
         watch={
           [
@@ -24,9 +41,14 @@ function App() {
         containerRef={containerRef}
       >
         <main data-scroll-container ref={containerRef}>
-          <Exnav />
-          <SecondPage />
-          {/*  <ThirdPage /> */}
+          {loading ? (
+            <Loding />
+          ) : (
+            <div>
+              <Exnav />
+              <SecondPage />
+            </div>
+          )}
         </main>
       </LocomotiveScrollProvider>
     </div>
