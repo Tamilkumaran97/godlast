@@ -23,7 +23,8 @@ import github from "./assets/github-svgrepo-com.svg";
 import twitter from "./assets/twitter-rounded-svgrepo-com.svg";
 import face from "./assets/facebook-round-svgrepo-com.svg";
 import tele from "./assets/telegram-fill-svgrepo-com.svg";
-import start from "./assets/start.png";
+/* import start from "./assets/start.png"; */
+import Transition from "./Transition";
 
 const SecondPage = () => {
   return (
@@ -33,6 +34,7 @@ const SecondPage = () => {
         id="fixed"
         className="  relative w-[100%] h-[198px] lg:w-[100%] lg:h-[100vh] overflow-hidden"
       >
+        <Transition />
         {/**----------------moon-------------- */}
         <div
           data-scroll
@@ -420,7 +422,7 @@ const SecondPage = () => {
         </div>
 
         <div className="w-full bg-[#37C3DEff] lg:rounded-b-[100px] absolute  h-[150vh]  lg:h-[200vh]  ">
-          <div>
+          {/*   <div>
             <img
               data-scroll
               data-scroll-speed="4"
@@ -428,7 +430,7 @@ const SecondPage = () => {
               src={start}
               alt=""
             />
-          </div>
+          </div> */}
           <img
             data-scroll
             data-scroll-direction="horizontal"

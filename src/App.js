@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import { Route, Router, Routes, route, useLocation } from "react-router-dom";
 
 import Exnav from "./Ligiotec Solution/Exnav";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -7,12 +8,19 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import SecondPage from "./Ligiotec Solution/SecondPage";
 
 import Loding from "./Ligiotec Solution/Loding";
+import ThirdPage from "./Ligiotec Solution/ThirdPage";
+import ScrollTriggerProxy from "./Ligiotec Solution/ScrollTriggerProxy";
+
+import { AnimatePresence } from "framer-motion";
+import Navbar from "./Ligiotec Solution/Navbar";
+import Transition from "./Ligiotec Solution/Transition";
+import HomeFirst from "./Ligiotec Solution/HomeFirst";
 function App() {
   const containerRef = useRef(null);
-
+  const location = useLocation();
   const [loading, setLoading] = useState(false);
 
-   useEffect(() => {
+  useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -40,14 +48,25 @@ function App() {
         }
         containerRef={containerRef}
       >
-        <main data-scroll-container ref={containerRef}>
+        <main className="App" data-scroll-container ref={containerRef}>
           {loading ? (
             <Loding />
           ) : (
-            <div>
-              <Exnav />
-              <SecondPage />
-            </div>
+            <>
+              <AnimatePresence mode="wait">
+                <Navbar />
+                <Routes key={location.pathname} location={location}>
+                  <Route path="/" element={<Exnav />} />
+                  <Route path="/about" element={<ThirdPage />} />
+                  <Route path="/contact" element={<SecondPage />} />
+                </Routes>
+              </AnimatePresence>
+              {/*   <SecondPage /> */}
+
+              {/*  <Transition /> */}
+              {/*   <Exnav />
+              <HomeFirst /> */}
+            </>
           )}
         </main>
       </LocomotiveScrollProvider>
