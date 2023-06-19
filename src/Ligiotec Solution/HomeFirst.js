@@ -1,14 +1,16 @@
 import React from "react";
+import Exnav from "./Exnav";
+import Explain from "./Explain";
+import DesignSolution from "./DesignSolution";
+import Footer1 from "./Footer1";
 
 const HomeFirst = () => {
   return (
-    <div className=" w-full relative h-screen bg-gray-500 ">
-      <div className="relative w-full ">
-        <div className="z-10 flex text-center  font-bold bold max-w-[900px]  text-5xl ">
-          <h1>hello world</h1>
-        </div>
-       
-      </div>
+    <div className="  relative   ">
+      <Exnav />
+      <Explain />
+      <DesignSolution />
+      <Footer1 />
     </div>
   );
 };

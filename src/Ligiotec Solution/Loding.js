@@ -8,25 +8,25 @@ const Loding = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 2 }}
         transition={{ delay: 6, duration: 0.2 }}
-        className=" absolute z-50 ml-[700px] w-[250px] h-[250px] bg-[#f55326] rounded-full"
+        className=" absolute z-50 ml-[700px] w-[250px] h-[250px] bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 2 }}
         transition={{ delay: 6, duration: 0.4 }}
-        className=" absolute z-50 ml-[900px] mt-[400px] w-[270px] h-[270px] bg-[#f55326] rounded-full"
+        className=" absolute z-50 ml-[900px] mt-[400px] w-[270px] h-[270px] bg-gradient-to-b from-sky-400 to-sky-200 rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 2 }}
         transition={{ delay: 6, duration: 0.6 }}
-        className="absolute z-50 ml-[400px] w-[150px] h-[150px] bg-[#f55326] rounded-full"
+        className="absolute z-50 ml-[400px] w-[150px] h-[150px] bg-gradient-to-r from-orange-300 to-rose-300 rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 2 }}
         transition={{ delay: 6, duration: 0.8 }}
-        className="absolute z-50 mt-[360px] ml-24 w-[250px] h-[250px] bg-[#f55326] rounded-full"
+        className="absolute z-50 mt-[360px] ml-24 w-[250px] h-[250px] bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600 rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0 }}

@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div>
-      {" "}
+
       <motion.div className="absolute z-50 mx-auto w-[100%] px-2 mt-10">
         <div className="text-white squad flex  justify-between px-3 lg:px-4 text-2xl pt-1">
           <motion.div whileHover={{ scale: 1.02 }}>

@@ -15,17 +15,22 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "./Ligiotec Solution/Navbar";
 import Transition from "./Ligiotec Solution/Transition";
 import HomeFirst from "./Ligiotec Solution/HomeFirst";
+import Navbar1 from "./Ligiotec Solution/Navbar1";
+import Contact from "./Ligiotec Solution/Contact";
+import Work from "./Ligiotec Solution/Work";
+import Services from "./Ligiotec Solution/Services";
+import AboutUs from "./Ligiotec Solution/AboutUs";
 function App() {
   const containerRef = useRef(null);
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 8000);
-  }, []);
+  }, []); */
   return (
     <div className="App">
       <LocomotiveScrollProvider
@@ -54,18 +59,22 @@ function App() {
           ) : (
             <>
               <AnimatePresence mode="wait">
-                <Navbar />
+                <Navbar1 />
                 <Routes key={location.pathname} location={location}>
-                  <Route path="/" element={<Exnav />} />
-                  <Route path="/about" element={<ThirdPage />} />
-                  <Route path="/contact" element={<SecondPage />} />
+                  <Route path="/" element={<HomeFirst />} />
+                  {/*     <Route path="/about" element={<ThirdPage />} />
+                  <Route path="/contact" element={<SecondPage />} /> */}
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/work" element={<Work />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/about" element={<AboutUs/>} />
                 </Routes>
               </AnimatePresence>
               {/*   <SecondPage /> */}
 
               {/*  <Transition /> */}
               {/*   <Exnav />
-              <HomeFirst /> */}
+               */}
             </>
           )}
         </main>
