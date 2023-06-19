@@ -25,12 +25,12 @@ function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
-  /*   useEffect(() => {
+  useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 8000);
-  }, []); */
+  }, []);
   return (
     <div className="App">
       <LocomotiveScrollProvider
@@ -67,7 +67,7 @@ function App() {
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/work" element={<Work />} />
                   <Route path="/services" element={<Services />} />
-                  <Route path="/about" element={<AboutUs/>} />
+                  <Route path="/about" element={<AboutUs />} />
                 </Routes>
               </AnimatePresence>
               {/*   <SecondPage /> */}

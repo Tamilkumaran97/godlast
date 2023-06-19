@@ -80,7 +80,7 @@ const Exnav = () => {
         id="all"
         className=" relative mx-auto  w-[100%] h-[100vh] "
       >
-        <Transition />
+        {/*  <Transition /> */}
         {/*      <Transition /> */}
         {/**Navbar */}
 
