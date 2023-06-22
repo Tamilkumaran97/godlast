@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import sound from "./assets/menu sound.unknown";
+/* import sound from "./assets/menu sound.unknown"; */
 
 import Hamburger from "hamburger-react";
 
@@ -13,20 +13,20 @@ import twitter from "./assets/twitter-rounded-svgrepo-com.svg";
 import tele from "./assets/telegram-fill-svgrepo-com.svg";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+/*   const [open, setOpen] = useState(false);
   const showMenu = () => {
     setOpen(!open);
   };
-
+ */
   const [menu, setMenu] = useState(false);
   const menuBar = () => {
     setMenu(!menu);
   };
 
-  const play = () => {
+/*   const play = () => {
     new Audio(sound).play();
   };
-
+ */
   return (
     <div>
 

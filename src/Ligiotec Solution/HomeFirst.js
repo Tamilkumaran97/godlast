@@ -6,7 +6,7 @@ import Footer1 from "./Footer1";
 
 const HomeFirst = () => {
   return (
-    <div className="  relative   ">
+    <div className="  ">
       <Exnav />
       <Explain />
       <DesignSolution />

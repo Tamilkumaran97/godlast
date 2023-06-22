@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Footer1 from "./Footer1";
-import LocomotiveScroll from "locomotive-scroll";
+
 import back from "./assets/back.jpg";
+import Transition from "./Transition";
 
 const Contact = () => {
   /*   const ref = useRef(null);
@@ -16,19 +17,21 @@ const Contact = () => {
     }
   }); */
   return (
-    <div className="w-[100%] h-[350vh]   ">
+    <div className="w-[100%]  ">
       <div className="w-[100%]  h-[100vh] overflow-hidden relative">
-        <div className="object-contain absolute">
-          <img className="" src={back} alt="" />
+        <Transition />
+
+        <div className="w-[100%] h-[100vh] absolute">
+          <img className="object-cover w-[100%] h-[100vh]" src={back} alt="" />
         </div>
         <div className="absolute w-[100%] h-[100vh] bg-black/50"></div>
         <div className="flex absolute justify-center items-center w-[100%] h-[100vh] ">
-          <div className="text-center p-44">
-            <h1 className="text-9xl bold text-white p-4">
+          <div className="text-center lg:p-44">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl bold text-white p-2 md:p-4">
               Say <span className="bg-yellow-500 px-4 text-black">HI</span>
             </h1>
 
-            <p className="text-3xl text-white p-4 ">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white p-2 lg:p-4 ">
               We get as excited about your project as you do, let’s chat about
               how we can help you make it a success.
             </p>
@@ -36,9 +39,9 @@ const Contact = () => {
         </div>
       </div>
       {/**contact box */}
-      <div className="w-[100%] h-[100vh]">
-        <section class="bg-white  flex dark:bg-gray-900">
-          <div class="py-8 lg:py-16 w-[50%]   px-4 ">
+      <div className="w-[100%] md:px-4">
+        <section class="bg-white  lg:flex dark:bg-gray-900">
+          <div class="py-8 lg:py-16 lg:w-[50%]   px-4 ">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
               Contact Us
             </h2>
@@ -99,29 +102,36 @@ const Contact = () => {
               </button>
             </form>
           </div>
-          <div className="w-[50%] flex">
-            <div className="pt-28">
-              <div className="p-12 ">
-                <h1 className="text-gray-500 text-xl ">India</h1>
-                <p className="font-bold text-xl">salem, tamilnadu</p>
+          {/**created box */}
+          <div className="lg:w-[50%] flex justify-evenly items-center lg:justify-between lg:items-center">
+            <div className=" lg:pt-28">
+              <div className="p-2 md:p-12 ">
+                <h1 className="text-gray-500 text-sm  md:text-xl ">India</h1>
+                <p className="font-bold text-sm  md:text-xl">
+                  salem, tamilnadu
+                </p>
               </div>
-              <div className="p-12 ">
-                <h1 className="text-gray-500 text-xl ">Customer support</h1>
-                <p className="font-bold text-xl">ligiotec@gmail.com</p>
+              <div className="p-2 md:p-12 ">
+                <h1 className="text-gray-500 text-sm  md:text-xl ">
+                  Customer support
+                </h1>
+                <p className="font-bold text-sm  md:text-xl">
+                  ligiotec@gmail.com
+                </p>
               </div>
-              <div className="p-12 ">
-                <h1 className="text-gray-500 text-xl ">Call us</h1>
-                <p className="font-bold text-xl">+919845623215</p>
+              <div className="p-2 md:p-12 ">
+                <h1 className="text-gray-500 text-sm  md:text-xl ">Call us</h1>
+                <p className="font-bold text-sm  md:text-xl">+919845623215</p>
               </div>
             </div>
-            <div className="pt-48">
-              <div className="p-12 ">
-                <h1 className="text-gray-500 text-xl ">India</h1>
-                <p className="font-bold text-xl">salem, tamilnadu</p>
+            <div className="">
+              <div className="p-2 md:p-12 ">
+                <h1 className="text-gray-500 text-sm  md:text-xl ">India</h1>
+                <p className="font-bold  text-sm md:text-xl">salem, tamilnadu</p>
               </div>
-              <div className="p-12 ">
-                <h1 className="text-gray-500 text-xl ">India</h1>
-                <p className="font-bold text-xl">salem, tamilnadu</p>
+              <div className="p-2 md:p-12 ">
+                <h1 className="text-gray-500  text-sm  md:text-xl ">India</h1>
+                <p className="font-bold text-sm md:text-xl">salem, tamilnadu</p>
               </div>
             </div>
           </div>

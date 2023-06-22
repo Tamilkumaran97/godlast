@@ -25,12 +25,12 @@ function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+    useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 8000);
-  }, []);
+  }, []); 
   return (
     <div className="App">
       <LocomotiveScrollProvider
@@ -58,21 +58,20 @@ function App() {
             <Loding />
           ) : (
             <>
-              <AnimatePresence mode="wait">
+               <AnimatePresence mode="wait">
                 <Navbar1 />
                 <Routes key={location.pathname} location={location}>
                   <Route path="/" element={<HomeFirst />} />
-                  {/*     <Route path="/about" element={<ThirdPage />} />
-                  <Route path="/contact" element={<SecondPage />} /> */}
+
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/work" element={<Work />} />
                   <Route path="/services" element={<Services />} />
                   <Route path="/about" element={<AboutUs />} />
                 </Routes>
-              </AnimatePresence>
+              </AnimatePresence> 
               {/*   <SecondPage /> */}
 
-              {/*  <Transition /> */}
+            {/*   <Transition /> */}
               {/*   <Exnav />
                */}
             </>
