@@ -17,9 +17,11 @@ const Footer1 = () => {
           <p className="text- pb-4 ">
             Act now to book a free consulting session with our experts today.
           </p>
-          <button className="bg-pink-500 mt-4 p-2 lg:p-4 rounded-full">
-            GET STARTED NOW
-          </button>
+        
+            <button className="bg-pink-500 mt-4 p-2 lg:p-4 rounded-full">
+              GET STARTED NOW
+            </button>
+        
         </div>
         <div className="md:w-1/2 hidden md:block ">
           <img src={man} alt="" />

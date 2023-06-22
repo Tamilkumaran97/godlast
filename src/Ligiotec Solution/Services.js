@@ -40,7 +40,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <div className="w-[100%] relative md:flex justify-center   mx-auto container  ">
+      <div className="w-[100%] relative md:flex justify-center  bg-gradient-to-r from-gray-100 to-gray-300 mx-auto container  ">
         <div className="px-4">
           {/**animation */}
           <div className="absolute w-[100%]  ">
