@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+/* import { motion } from "framer-motion"; */
 import insta from "./assets/instagram-round-svgrepo-com.svg";
 import whatsapp from "./assets/whatsapp-alt-svgrepo-com.svg";
 import github from "./assets/github-svgrepo-com.svg";

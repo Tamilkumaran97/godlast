@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
-import { Route, Router, Routes, route, useLocation } from "react-router-dom";
+import { Route,  Routes,  useLocation } from "react-router-dom";
 
-import Exnav from "./Ligiotec Solution/Exnav";
+/* import Exnav from "./Ligiotec Solution/Exnav"; */
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import SecondPage from "./Ligiotec Solution/SecondPage";
+/* import SecondPage from "./Ligiotec Solution/SecondPage"; */
 
 import Loding from "./Ligiotec Solution/Loding";
-import ThirdPage from "./Ligiotec Solution/ThirdPage";
-import ScrollTriggerProxy from "./Ligiotec Solution/ScrollTriggerProxy";
+/* import ThirdPage from "./Ligiotec Solution/ThirdPage";
+import ScrollTriggerProxy from "./Ligiotec Solution/ScrollTriggerProxy"; */
 
 import { AnimatePresence } from "framer-motion";
-import Navbar from "./Ligiotec Solution/Navbar";
-import Transition from "./Ligiotec Solution/Transition";
+/* import Navbar from "./Ligiotec Solution/Navbar";
+import Transition from "./Ligiotec Solution/Transition"; */
 import HomeFirst from "./Ligiotec Solution/HomeFirst";
 import Navbar1 from "./Ligiotec Solution/Navbar1";
 import Contact from "./Ligiotec Solution/Contact";
