@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Loding = () => {
   return (
-    <section className="mx-auto w-screen h-screen overflow-hidden">
+    <section className="mx-auto w-screen ">
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 2, opacity: 1 }}

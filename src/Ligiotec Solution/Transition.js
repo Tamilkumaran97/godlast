@@ -5,11 +5,11 @@ const Transition = () => {
   return (
     <>
       <motion.div
-        initial={{ y: -300 }}
-       whileInView={{ y: window.innerHeight }}
+        initial={{ y: -300,  }}
+        whileInView={{ y: "100%" }}
         transition={{ duration: 1.5 }}
-        viewport={{once: true}}
-        exit={{ y: [window.innerHeight, -350], transition: { duration: 1.5 } }}
+        viewport={{ once: true }}
+        exit={{ y: [window.innerHeight, -300 ] , transition: { duration: 1.5 } }}
         className="absolute  w-screen h-screen z-[70] "
       >
         <motion.div className=" w-[100%] h-[100vh]  ">
