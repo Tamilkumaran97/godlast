@@ -8,7 +8,7 @@ const Loding = () => {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 2, opacity: 1 }}
         transition={{ delay: 6, duration: 0.2 }}
-        className=" absolute z-50 ml-[700px] w-[250px] h-[250px] bg-gradient-to-r from-blue-500/20 to-blue-600/20rounded-full"
+        className=" absolute z-50 ml-[700px] w-[250px] h-[250px] bg-gradient-to-r from-blue-500/20 to-blue-600/2    rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
@@ -20,7 +20,7 @@ const Loding = () => {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 2, opacity: 1 }}
         transition={{ delay: 6, duration: 0.6 }}
-        className="absolute z-50 ml-[400px] w-[150px] h-[150px] bg-gradient-to-r from-orange-300 to-rose-300 rounded-full"
+        className="absolute z-50 ml-[400px] w-[150px] h-[150px] bg-gradient-to-r from-orange-300 to-rose-300   rounded-full"
       ></motion.div>
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
